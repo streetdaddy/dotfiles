@@ -136,6 +136,12 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
 
+# enable git completion
+if [ -f ~/.git-completion.bash ]; then
+    . ~/.git-completion.bash
+fi
+
 #source /etc/profile.d/rvm.sh
 
+# Alias for dotfiles git storage
 alias config='git --git-dir=$HOME/.config.git/ --work-tree=$HOME'
