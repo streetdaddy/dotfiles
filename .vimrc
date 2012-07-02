@@ -124,7 +124,7 @@
     autocmd BufEnter * if bufname("") !~ "^\[A-Za-z0-9\]*://" | lcd %:p:h | endif
     " always switch to the current file directory.
 
-    " set autowrite                  " automatically write a file when leaving a modified buffer
+    set autowrite                  " automatically write a file when leaving a modified buffer
     set shortmess+=filmnrxoOtT      " abbrev. of messages (avoids 'hit enter')
     set viewoptions=folds,options,cursor,unix,slash " better unix / windows compatibility
     set virtualedit=onemore         " allow for cursor beyond last character
@@ -189,7 +189,7 @@
     set whichwrap=b,s,h,l,<,>,[,]   " backspace and cursor keys wrap to
     set scrolljump=5                " lines to scroll when cursor leaves screen
     set scrolloff=3                 " minimum lines to keep above and below cursor
-    set foldenable                  " auto fold code
+    "set foldenable                  " auto fold code
     set list
     set listchars=tab:,.,trail:.,extends:#,nbsp:. " Highlight problematic whitespace
 
@@ -294,7 +294,7 @@
 " Plugins {
 
     " PIV {
-        let g:DisableAutoPHPFolding = 0
+        let g:DisableAutoPHPFolding = 1
         let g:PIVAutoClose = 0
     " }
 

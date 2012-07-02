@@ -132,13 +132,20 @@ fi
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).
-if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
-    . /etc/bash_completion
-fi
+#if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
+    #. /etc/bash_completion
+#fi
 
 # enable git completion
 if [ -f ~/.git-completion.bash ]; then
     . ~/.git-completion.bash
+fi
+
+if [ -f ~/bin/bash_completion ] ; then
+    BASH_COMPLETION=~/bin/bash_completion
+    BASH_COMPLETION_DIR=~/bin/bash_completion.d
+    export BASH_COMPLETION BASH_COMPLETION_DIR
+    . ~/bin/bash_completion
 fi
 
 #source /etc/profile.d/rvm.sh
