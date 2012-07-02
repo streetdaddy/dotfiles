@@ -17,6 +17,7 @@ alias api='cd /opt/api/'
 alias reb='ws && ./scripts/rebuildAndFlush'
 alias gq='/opt/api/scripts/cassandra/getRow -cf quiz -uid '
 alias ga='/opt/api/scripts/cassandra/getRow -cf apiAccount -uid '
+alias wserr='tail -f /var/log/apache2/ws.visualdna.com.err &'
 
 alias c="cd"
 alias c.="cd .."
