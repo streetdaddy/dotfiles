@@ -15,6 +15,7 @@ alias vm-umount='sudo umount -f vm-var-www && sudo umount -f vm-opt'
 alias ws='cd /var/www/ws.visualdna.com/'
 alias api='cd /opt/api/'
 alias reb='ws && ./scripts/rebuildAndFlush'
+alias wserr='tail -f /var/log/apache2/ws.visualdna.com.err &'
 
 alias c="cd"
 alias c.="cd .."
