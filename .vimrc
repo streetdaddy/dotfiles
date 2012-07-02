@@ -402,6 +402,8 @@
 
      " Buffer explorer {
         nmap <leader>b :BufExplorer<CR>
+        nnoremap <silent> <F12> :bn<CR>
+        nnoremap <silent> <S-F12> :bp<CR>
      " }
 
      " JSON {

@@ -46,3 +46,5 @@
     untracked = cyan
 [core]
     excludesfile = ~/.gitignore_global
+[diff]
+    tool = vimdiff
