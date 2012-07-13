@@ -1,0 +1,19 @@
+" Map + to X11 clipboard
+"set clipboard=unnamedplus
+
+" Quickly edit/reload the vimrc file
+nmap <silent> <leader>ev :e $MYVIMRC<CR>
+nmap <silent> <leader>sv :so $MYVIMRC<CR>
+
+" Remap colon to remove need for Shift key with commands
+nnoremap ; :
+
+" Forcing myself to use hjkl for navigating
+"map <up> <nop>
+"map <down> <nop>
+"map <left> <nop>
+"map <right> <nop>
+
+" Jump to next row instead of next line
+nnoremap j gj
+nnoremap k gk
