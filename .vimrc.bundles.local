@@ -1,2 +1,4 @@
 " PHP Twig
 Bundle "YankRing.vim"
+Bundle "minibufexpl.vim"
+Bundle "LustyJuggler"

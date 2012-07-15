@@ -14,7 +14,7 @@ alias vm-umount='sudo umount -f vm-var-www && sudo umount -f vm-opt'
 
 alias ws='cd /var/www/ws.visualdna.com/'
 alias api='cd /opt/api/'
-alias reb='ws && ./scripts/rebuildAndFlush'
+alias reb='TMP=`pwd` && ws && ./scripts/rebuildAndFlush && cd $TMP'
 alias gq='/opt/api/scripts/cassandra/getRow -cf quiz -uid '
 alias ga='/opt/api/scripts/cassandra/getRow -cf apiAccount -uid '
 alias wserr='tail -f /var/log/apache2/ws.visualdna.com.err &'
