@@ -8,16 +8,16 @@ Includes the following:
 * A long list of Bash Completion scripts
 * VCS enabled Bash prompt using vcsprompt
 
-[0] https://github.com/spf13/spf13-vim
+[0]: https://github.com/spf13/spf13-vim
 
 Profile management with Git and Bitbucket (or GitHub)
 ======================================
 
 The following is a way to manage profile configuration files using Git.
 
-Originally based on [Silas Sewell][0] description.
+Originally based on [Silas Sewell][1] description.
 
-[0]: http://www.silassewell.com/blog/2009/03/08/profile-management-with-git-and-github/
+[1]: http://www.silassewell.com/blog/2009/03/08/profile-management-with-git-and-github/
 
 Features
 --------
@@ -43,7 +43,7 @@ First time setup
 
 > config commit -m 'Initial commit'
 
-> config remote add origin USERNAME@bitbucket.com:BITBUCKET_USERNAME/config.git
+> config remote add origin https://bitbucket.com/BITBUCKET_USERNAME/config.git
 
 > config push origin master
 
@@ -63,7 +63,7 @@ Backup your local configuration files, example:
 > mv .bash_profile .bash_profile.bk
 
 Clone your configuration repository
-> git clone USERNAME@bitbucket.com:BITBUCKET_USERNAME/config.git config.git
+> git clone https://bitbucket.com/BITBUCKET_USERNAME/config.git config.git
 
 Move the git metadata to ~/.config.git
 > mv config.git/.git .config.git
@@ -76,3 +76,4 @@ Move your configuration files to your home directory
 
 Delete Git directory
 > rmdir config.git
+
