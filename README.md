@@ -43,7 +43,7 @@ First time setup
 
 > config commit -m 'Initial commit'
 
-> config remote add origin https://bitbucket.com/BITBUCKET_USERNAME/config.git
+> config remote add origin git@bitbucket.com:BITBUCKET_USERNAME/config.git
 
 > config push origin master
 
@@ -63,7 +63,7 @@ Backup your local configuration files, example:
 > mv .bash_profile .bash_profile.bk
 
 Clone your configuration repository
-> git clone https://bitbucket.com/BITBUCKET_USERNAME/config.git config.git
+> git clone git@bitbucket.com:BITBUCKET_USERNAME/config.git config.git
 
 Move the git metadata to ~/.config.git
 > mv config.git/.git .config.git
