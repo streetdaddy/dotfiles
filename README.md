@@ -83,4 +83,5 @@ VCS enabled Bash prompt using vcsprompt
 To install:
 
 > curl -sL https://github.com/djl/vcprompt/raw/master/bin/vcprompt > ~/bin/vcprompt
+
 > chmod 755 ~/bin/vcprompt
