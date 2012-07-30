@@ -17,3 +17,6 @@ nnoremap ; :
 " Jump to next row instead of next line
 nnoremap j gj
 nnoremap k gk
+
+" NERDTree fix
+let NERDTreeDirArrows=0
