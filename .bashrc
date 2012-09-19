@@ -129,6 +129,12 @@ if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
 
+# Local bash include
+# Look for bash commands specific to this environment
+if [ -f ~/.bashrc.local ]; then
+    . ~/.bashrc.local
+fi
+
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).
