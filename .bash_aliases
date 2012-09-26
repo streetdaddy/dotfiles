@@ -18,7 +18,7 @@ alias api='cd /opt/api/'
 alias reb='TMP=`pwd` && api && ./deploy-scripts/run-on-all-targets/pre.d/20-standard-phing && ws && ./deploy-scripts/run-on-all-targets/pre.d/20-standard-phing && ./deploy-scripts/run-on-all-targets/post.d/20-restart-apache-and-flush-twig && cd $TMP'
 alias gq='/opt/api/scripts/cassandra/getRow -cf quiz -uid '
 alias ga='/opt/api/scripts/cassandra/getRow -cf apiAccount -uid '
-alias wserr='tail -f /var/log/apache2/ws.visualdna.com.err &'
+alias wserr='tail -f /var/log/apache2/ws.error.log &'
 
 alias c="cd"
 alias c.="cd .."
