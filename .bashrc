@@ -154,6 +154,8 @@ if [ -f ~/bin/bash_completion ] ; then
     . ~/bin/bash_completion
 fi
 
+export INPUTRC=~/.inputrc
+
 #source /etc/profile.d/rvm.sh
 
 # Alias for dotfiles git storage
