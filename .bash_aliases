@@ -11,7 +11,7 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 
 alias vm-mount='sshfs -o idmap=user -o nonempty root@hq-miles-d02:/var/www/ws.visualdna.com /var/www/ws.visualdna.com && sshfs -o idmap=user -o nonempty root@hq-miles-d02:/opt/api /opt/api && sshfs -o idmap=user -o nonempty root@hq-miles-d02:/usr/share/php /home/streetdaddy/usr-share-php && sshfs -o idmap=user -o nonempty root@hq-miles-d02:/var/www/adj.visualdna.com /var/www/adj.visualdna.com'
 alias vm-umount='sudo umount -f /opt/api && sudo umount -f /var/www/ws.visualdna.com && sudo umount -f /home/streetdaddy/usr-share-php && sudo umount -f /var/www/adj.visualdna.com'
-alias vms="ssh root@hq-miles-d02 -A"
+alias vms="ssh root@hq-mtillinger-d02 -A"
 
 alias ws='cd /var/www/ws.visualdna.com/'
 alias api='cd /opt/api/'
