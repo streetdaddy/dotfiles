@@ -20,3 +20,6 @@ nnoremap k gk
 
 " NERDTree fix
 let NERDTreeDirArrows=0
+
+" Suppress read-only file warnings
+set autoread
