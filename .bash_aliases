@@ -28,3 +28,6 @@ alias c...="cd ../../.."
 alias c....="cd ../../../.."
 
 alias g="git"
+
+# Disk usage sort by size in human readable format
+alias dus="du -hs * | sort -h"
