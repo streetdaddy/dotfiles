@@ -63,7 +63,7 @@ Backup your local configuration files, example:
 > mv .bash_profile .bash_profile.bk
 
 Clone your configuration repository
-> git clone git@bitbucket.com:BITBUCKET_USERNAME/config.git config.git
+> git clone git@bitbucket.org:BITBUCKET_USERNAME/config.git config.git
 
 Move the git metadata to ~/.config.git
 > mv config.git/.git .config.git
@@ -85,3 +85,14 @@ To install:
 > curl -sL https://github.com/djl/vcprompt/raw/master/bin/vcprompt > ~/bin/vcprompt
 
 > chmod 755 ~/bin/vcprompt
+
+Install spf13 vim configuration
+================================
+
+There are local configuration files to add and override a few vim settings and install a few extra bundles.
+
+Install the spf13 base configuration by running this command:
+
+> curl http://j.mp/spf13-vim3 -L -o - | sh
+
+
