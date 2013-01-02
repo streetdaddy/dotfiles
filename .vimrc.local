@@ -1,3 +1,6 @@
+" Assume a dark background
+set background=dark
+
 " Map + to X11 clipboard
 "set clipboard=unnamedplus
 
@@ -18,8 +21,24 @@ nnoremap ; :
 nnoremap j gj
 nnoremap k gk
 
+" Make it so ; works like : for commands
+nnoremap ; :
+
 " NERDTree fix
 let NERDTreeDirArrows=0
 
 " Suppress read-only file warnings
 set autoread
+
+" EasyTags
+let g:easytags_cmd = 'ctags'
+
+" SnipMate
+let g:snips_author = "Miles Tillinger <streetdaddy@gmail.com>"
+
+" Buffer Explorer
+nnoremap <silent> <F12> :bn<CR>
+nnoremap <silent> <S-F12> :bp<CR>
+
+" FuzzyFinder
+nnoremap <silent> <leader>fj :FufJumpList<CR>
