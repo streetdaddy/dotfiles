@@ -39,7 +39,7 @@ bakwht='\e[47m'   # White
 txtrst='\e[0m'    # Text Reset
 
 print_before_the_prompt () {
-    printf "\n$txtred%s: $bldgrn%s $txtpur%s\n$txtrst" "$USER" "$PWD" "$(vcprompt)"
+    printf "\n$txtred%s: $bldgrn%s $txtpur%s\n$txtrst" "$USER" "$PWD" "$(vcprompt --format %s:%b%m)"
 }
 
 PROMPT_COMMAND=print_before_the_prompt
