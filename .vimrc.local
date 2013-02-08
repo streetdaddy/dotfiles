@@ -42,3 +42,11 @@ nnoremap <silent> <S-F12> :bp<CR>
 
 " FuzzyFinder
 nnoremap <silent> <leader>fj :FufJumpList<CR>
+
+" CtrlP
+"nnoremap <silent> <C-o> :CtrlPMixed<CR>
+
+" Show 80 character line length marker
+set colorcolumn=80
+highlight OverLength ctermbg=red ctermfg=white guibg=#592929
+match OverLength /\%81v.\+/
