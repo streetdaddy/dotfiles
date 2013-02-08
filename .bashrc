@@ -163,3 +163,4 @@ export INPUTRC=~/.inputrc
 
 # Alias for dotfiles git storage
 alias config='git --git-dir=$HOME/.config.git/ --work-tree=$HOME'
+[[ -f "/home/streetdaddy/.local/share/Steam/setup_debian_environment.sh" ]] && source "/home/streetdaddy/.local/share/Steam/setup_debian_environment.sh"
