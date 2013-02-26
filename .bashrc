@@ -164,3 +164,6 @@ export INPUTRC=~/.inputrc
 # Alias for dotfiles git storage
 alias config='git --git-dir=$HOME/.config.git/ --work-tree=$HOME'
 [[ -f "/home/streetdaddy/.local/share/Steam/setup_debian_environment.sh" ]] && source "/home/streetdaddy/.local/share/Steam/setup_debian_environment.sh"
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*

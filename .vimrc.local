@@ -50,3 +50,9 @@ nnoremap <silent> <leader>fj :FufJumpList<CR>
 set colorcolumn=80
 highlight OverLength ctermbg=red ctermfg=white guibg=#592929
 match OverLength /\%81v.\+/
+
+" Coffeescript plugin
+filetype on
+filetype indent on
+filetype plugin on
+autocmd FileType coffee setlocal omnifunc=coffeecomplete#Complete

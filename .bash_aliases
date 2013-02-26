@@ -36,3 +36,6 @@ alias dus="du -hs * | sort -h"
 # Value set is for _my_ opacity_values.  Use with care.
 alias opon="gconftool-2 -s -t list --list-type=int /apps/compiz-1/plugins/obs/screen0/options/opacity_values [90,90,90,90,100,0]"
 alias opoff="gconftool-2 -s -t list --list-type=int /apps/compiz-1/plugins/obs/screen0/options/opacity_values [90,100,90,90,100,0]"
+
+# Force 256 color mode for tmux
+alias tmux="tmux -2"
