@@ -1,6 +1,6 @@
 [user]
 	name = Miles Tillinger
-	email = miles.tillinger@visualdna.com
+	email = streetdaddy@gmail.com
 [alias]
     graph = !git log --graph --color --abbrev-commit --pretty=oneline --decorate
     st = status

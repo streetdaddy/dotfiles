@@ -13,3 +13,15 @@ export EDITOR=/usr/bin/vim
 
 mesg n
 
+
+##
+# Your previous /Users/mtillinger/.profile file was backed up as /Users/mtillinger/.profile.macports-saved_2013-03-06_at_16:20:10
+##
+
+# MacPorts Installer addition on 2013-03-06_at_16:20:10: adding an appropriate PATH variable for use with MacPorts.
+export PATH=/opt/local/bin:/opt/local/sbin:/usr/local/sbin:$PATH
+# Finished adapting your PATH environment variable for use with MacPorts.
+
+
+#THIS MUST BE AT THE END OF THE FILE FOR GVM TO WORK!!!
+[[ -s "/Users/mtillinger/.gvm/bin/gvm-init.sh" && -z $(which gvm-init.sh | grep '/gvm-init.sh') ]] && source "/Users/mtillinger/.gvm/bin/gvm-init.sh"
