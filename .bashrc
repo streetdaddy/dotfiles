@@ -59,7 +59,7 @@ HISTSIZE=100000
 HISTFILESIZE=100000
 
 # Save and reload the history after each command finishes
-export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
+#export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
 
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
@@ -167,3 +167,5 @@ alias config='git --git-dir=$HOME/.config.git/ --work-tree=$HOME'
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+
+export SSH_AUTH_SOCK="$HOME/.ssh/ssh_auth_sock"
