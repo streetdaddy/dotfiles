@@ -8,6 +8,9 @@ set background=dark
 nmap <silent> <leader>ev :e $MYVIMRC<CR>
 nmap <silent> <leader>sv :so $MYVIMRC<CR>
 
+" Quickly edit the vimrc.local
+nmap <silent> <leader>lv :e ~/.vimrc.local<CR>
+
 " Remap colon to remove need for Shift key with commands
 nnoremap ; :
 
@@ -26,6 +29,11 @@ nnoremap ; :
 
 " NERDTree fix
 let NERDTreeDirArrows=0
+" guarantees that the NERDTrees for all tabs will be one and the same
+map :NERDTreeToggle | :silent NERDTreeMirror"
+
+" CtrlP settings
+let g:ctrlp_dont_split = 'nerdtree'
 
 " Suppress read-only file warnings
 set autoread
@@ -48,11 +56,16 @@ nnoremap <silent> <leader>fj :FufJumpList<CR>
 
 " Show 80 character line length marker
 set colorcolumn=80
-highlight OverLength ctermbg=red ctermfg=white guibg=#592929
-match OverLength /\%81v.\+/
+"highlight OverLength ctermbg=red ctermfg=white guibg=#592929
+"match OverLength /\%81v.\+/
 
 " Coffeescript plugin
 filetype on
 filetype indent on
 filetype plugin on
 autocmd FileType coffee setlocal omnifunc=coffeecomplete#Complete
+
+" SASS syntax highlighting
+"au! BufRead,BufNewFile *.sass         setfiletype sass
+"au! BufRead,BufNewFile *.scss         setfiletype sass
+"autocmd FileType scss set omnifunc=csscomplete#CompleteCSS
