@@ -30,7 +30,7 @@ nnoremap ; :
 " NERDTree fix
 let NERDTreeDirArrows=0
 " guarantees that the NERDTrees for all tabs will be one and the same
-map :NERDTreeToggle | :silent NERDTreeMirror"
+"map :NERDTreeToggle | :silent NERDTreeMirror"
 
 " CtrlP settings
 let g:ctrlp_dont_split = 'nerdtree'
