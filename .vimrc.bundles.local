@@ -1,16 +1,19 @@
 " PHP Twig
-Bundle "YankRing.vim"
+Bundle 'YankRing.vim'
 "Bundle "minibufexpl.vim"
 Bundle "LustyJuggler"
 Bundle "FuzzyFinder"
 Bundle 'Better-CSS-Syntax-for-Vim'
 Bundle 'DirDiff.vim'
 Bundle 'L9'
-Bundle 'bufexplorer'
-Bundle 'bufexplorer.zip'
 Bundle 'tagbar'
 Bundle 'vcscommand.vim'
-Bundle 'vim-snipmate'
-Bundle 'vim-web-indent'
+"Bundle 'vim-snipmate'
+"Bundle 'vim-web-indent'
 Bundle 'AutoClose'
 Bundle 'kchmck/vim-coffee-script.git'
+Bundle 'jeffkreeftmeijer/vim-numbertoggle.git'
+"Bundle 'Sass'
+"Bundle 'cakebaker/scss-syntax'
+Bundle 'tpope/vim-haml'
+Bundle 'bufkill.vim'
