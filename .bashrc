@@ -166,11 +166,14 @@ alias dotfiles='git --git-dir=$HOME/.dotfiles.git/ --work-tree=$HOME'
 
 [[ -f "/home/streetdaddy/.local/share/Steam/setup_debian_environment.sh" ]] && source "/home/streetdaddy/.local/share/Steam/setup_debian_environment.sh"
 
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+#PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+#[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
 # Fix tmux agent forwarding
 export SSH_AUTH_SOCK="$HOME/.ssh/ssh_auth_sock"
 
 # This must be at the end of the file for gvm to work!!!
 [[ -s "/Users/mtillinger/.gvm/bin/gvm-init.sh" && -z $(which gvm-init.sh | grep '/gvm-init.sh') ]] && source "/Users/mtillinger/.gvm/bin/gvm-init.sh"
+
+source /opt/boxen/env.sh
+ulimit -n 1024

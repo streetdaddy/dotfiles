@@ -25,3 +25,21 @@ export PATH=/opt/local/bin:/opt/local/sbin:/usr/local/sbin:$PATH
 
 #THIS MUST BE AT THE END OF THE FILE FOR GVM TO WORK!!!
 [[ -s "/Users/mtillinger/.gvm/bin/gvm-init.sh" && -z $(which gvm-init.sh | grep '/gvm-init.sh') ]] && source "/Users/mtillinger/.gvm/bin/gvm-init.sh"
+
+##
+# Your previous /Users/mtillinger/.profile file was backed up as /Users/mtillinger/.profile.macports-saved_2013-08-30_at_21:45:06
+##
+
+# MacPorts Installer addition on 2013-08-30_at_21:45:06: adding an appropriate PATH variable for use with MacPorts.
+export PATH=/opt/local/bin:/opt/local/sbin:$PATH
+# Finished adapting your PATH environment variable for use with MacPorts.
+
+
+##
+# Your previous /Users/mtillinger/.profile file was backed up as /Users/mtillinger/.profile.macports-saved_2013-11-22_at_15:25:02
+##
+
+# MacPorts Installer addition on 2013-11-22_at_15:25:02: adding an appropriate PATH variable for use with MacPorts.
+export PATH=/opt/local/bin:/opt/local/sbin:$PATH
+# Finished adapting your PATH environment variable for use with MacPorts.
+

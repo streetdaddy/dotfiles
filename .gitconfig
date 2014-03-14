@@ -45,7 +45,13 @@
     changed = green
     untracked = cyan
 [core]
-    excludesfile = ~/.gitignore_global
+    excludesfile = /opt/boxen/config/git/gitignore
 	editor = vim
 [diff]
     tool = vimdiff
+
+[credential]
+	helper = /opt/boxen/bin/boxen-git-credential
+
+[hub]
+protocol = https

@@ -1,9 +1,9 @@
 # some more ls aliases
-alias ll='ls -alF'
-alias la='ls -A'
-alias l='ls -CF'
-alias lls="ls -FlhSr"
-alias llt="ls -Flhtr"
+alias ll='ls -alFG'
+alias la='ls -AG'
+alias l='ls -CFG'
+alias lls="ls -FlhSrG"
+alias llt="ls -FlhtrG"
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
