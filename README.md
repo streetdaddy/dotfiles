@@ -27,31 +27,7 @@ Features
 * Home directory is not a Git repo
 * All the power of git with a simple alias
 
-
-First time setup
-----------------
-
-> cd ~
-
-> mkdir .config.git
-
-> echo "alias config='git --git-dir=$HOME/.dotfiles.git/ --work-tree=$HOME'" >> .bashrc
-
-> source .bashrc
-
-> config add .bash_profile .bashrc .bash_aliases
-
-> config commit -m 'Initial commit'
-
-> config remote add origin git@bitbucket.com:BITBUCKET_USERNAME/dotfiles.git
-
-> config push origin master
-
-If you get an error when running config pull to the effect of You asked me to pull without... run the follow:
-> echo -e '[branch "master"]\n  remote = origin\n  merge = refs/heads/master' >> ~/.dotfiles.git/config
-
-
-Setup configuration on different machine
+Setup dotfiles on a new machine
 ----------------------------------------
 
 Add your public keys to Bitbucket (if you haven't done so already)
