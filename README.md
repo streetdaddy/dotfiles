@@ -63,7 +63,7 @@ Backup your local configuration files, example:
 > mv .bash_profile .bash_profile.bk
 
 Clone your configuration repository
-> git clone git@bitbucket.org:streetdaddy/dotfiles.git dotfiles.git
+> git clone git@github.com:streetdaddy/dotfiles.git dotfiles.git
 
 Move the git metadata to ~/.config.git
 > mv dotfiles.git/.git .dotfiles.git
