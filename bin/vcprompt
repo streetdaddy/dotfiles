@@ -9,6 +9,7 @@ Options:
   -p, --path PATH            The path to run vcprompt on.
   -s, --systems              Print all known VCSs and exit
   -t, --timeout              The max execution time in milliseconds
+  -n, --no-newline           Do not print a trailing newline character
   -v, --version              Show program's version number and exit
   -h, --help                 Show this help message and exit
 
@@ -50,8 +51,8 @@ import optparse
 import os
 import re
 import shlex
-import signal
 import sys
+import threading
 
 try:
     import sqlite3
@@ -206,6 +207,7 @@ def main():
     parser.add_option('-h', '--help', action='callback', callback=helper)
     parser.add_option('-f', '--format', dest='format', default=FORMAT)
     parser.add_option('-p', '--path', dest='path', default='.')
+    parser.add_option('-n', '--no-newline', action='store_false', dest='newline', default=True)
     parser.add_option('-s', '--systems', action='callback', callback=systems)
     parser.add_option('-t', '--timeout', dest='timeout', default=TIMEOUT, type='int')
     parser.add_option('-A', '--staged', dest='staged', default=STAGED)
@@ -227,15 +229,13 @@ def main():
     # set max execution time
     # exit with status errno.ETIME if timeout is reached
     timeout = float(options.timeout) / 1000
-    signal.signal(signal.SIGALRM, lambda x, y: sys.exit(errno.ETIME))
-
-    # Use setitimer on Python 2.6+
-    try:
-        signal.setitimer(signal.ITIMER_REAL, timeout)
-    except AttributeError:
-        signal.alarm(int(round(timeout)))
+    timer = threading.Timer(timeout, lambda: sys.exit(errno.ETIME))
+    timer.start()
 
     output = vcprompt(options)
+    if options.newline:
+        output += '\n'
+    timer.cancel()
     return output
 
 
@@ -308,12 +308,6 @@ def darcs(options):
             patch = dom.getElementsByTagName("patch")[0].getAttribute("hash")
             sha = patch.rsplit('-', 1)[-1].split('.')[0][:7]
 
-    # branch
-    # darcs doesn't have in-repo local branching (yet), so just use
-    # the directory name for now
-    # see also: http://bugs.darcs.net/issue555
-    branch = os.path.basename(options.path)
-
     # modified
     if re.search('%[mu]', options.format):
         output, returncode = popen('darcs whatsnew -l -s')
@@ -331,7 +325,7 @@ def darcs(options):
 
     # formatting
     return {
-        'branch': branch,
+        'branch': os.path.basename(options.path),
         'hash': sha,
         'modified': modified,
         'untracked': untracked,
@@ -636,6 +630,6 @@ def svn(options):
 if __name__ == '__main__':
     prompt = main()
     if prompt:
-        sys.stdout.write(prompt + '\n')
+        sys.stdout.write(prompt)
     else:
         sys.exit(1)
